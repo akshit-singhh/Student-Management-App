@@ -75,19 +75,36 @@ It allows admins to **log in, view/update profile**, and **manage student inform
 
 ---
 
-## 🔗 Backend — FastAPI
+## 🌐 Backend Integration
 
-The app communicates with a **Python FastAPI backend** for authentication and student data management.
+This Android app communicates with a FastAPI backend built with Python, SQLModel, and MySQL to manage student data securely and efficiently.
+Backend Repository: Student Management Backend
 
-**Backend Features:**
-- REST APIs for **login, profile, and student CRUD operations**  
-- SQLite database for storing admin and student data  
-- JSON responses consumable by the Android app  
-- CORS enabled for local development  
+- The app uses Retrofit2 to call REST API endpoints exposed by the backend.
+- Endpoints include:
+- POST /login — Admin login
+- GET /students — Fetch all students
+- POST /students — Add a new student
+- PUT /students/{id} — Update student details
+- GET /profile & PUT /profile — Admin profile operations
 
-**Backend Repository:** [Student Management FastAPI](https://github.com/akshit-singhh/Student-Management-FastAPI)  
+## ⚡ Setup Note
 
+Make sure the backend is running locally or on a server, and the app’s BASE_URL points to the correct backend URL. Example in ApiClient.kt:
 **Example API Endpoints:**
+
+```
+object ApiClient {
+    private const val BASE_URL = "http://192.168.1.100:8000/" // Update with your backend IP
+    val apiService: ApiService = Retrofit.Builder()
+        .baseUrl(BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
+        .create(ApiService::class.java)
+}
+
+```
+This ensures that all app requests are correctly routed to your backend API.
 
 | Endpoint | Description |
 |----------|-------------|
