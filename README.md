@@ -80,6 +80,8 @@ It allows admins to **log in, view/update profile**, and **manage student inform
 
 ## 🌐 Backend Integration
 
+**Backend Repo:** [Student Management App FASTAPI Backend](https://github.com/akshit-singhh/Student-Management-App-FASTAPI-Backend)
+
 This Android app communicates with a FastAPI backend built with Python, SQLModel, and MySQL to manage student data securely and efficiently.
 Backend Repository: Student Management Backend
 
