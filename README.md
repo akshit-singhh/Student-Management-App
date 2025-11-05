@@ -60,6 +60,9 @@ It allows admins to **log in, view/update profile**, and **manage student inform
 
 ---
 
+## Demo Video
+[Watch Demo Video](https://drive.google.com/file/d/1VgK0XR7BQsdugtPgF4Vvx6jkdJrYMy2k/view?usp=sharing)
+
 ## 🧠 Tech Stack
 
 **Language:** Kotlin  
