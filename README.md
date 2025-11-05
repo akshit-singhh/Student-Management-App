@@ -75,6 +75,30 @@ It allows admins to **log in, view/update profile**, and **manage student inform
 
 ---
 
+## 🔗 Backend — FastAPI
+
+The app communicates with a **Python FastAPI backend** for authentication and student data management.
+
+**Backend Features:**
+- REST APIs for **login, profile, and student CRUD operations**  
+- SQLite database for storing admin and student data  
+- JSON responses consumable by the Android app  
+- CORS enabled for local development  
+
+**Backend Repository:** [Student Management FastAPI](https://github.com/akshit-singhh/Student-Management-FastAPI)  
+
+**Example API Endpoints:**
+
+| Endpoint | Description |
+|----------|-------------|
+| `/login` | Authenticate admin login |
+| `/students` | Fetch list of students |
+| `/students/{id}` | Get, update, or delete a student |
+| `/students/add` | Add a new student record |
+| `/profile` | Fetch or update admin profile |
+
+---
+
 ## 📦 App Setup Guide
 
 ### ✅ Step 1 — Project Configuration
